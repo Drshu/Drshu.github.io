@@ -306,21 +306,12 @@
 
       
         
-          
-            <p>众所周知，mac之下的iTunes进行设备备份的时候，默认路径是：<em>/Users/用户名/Library/Application Support/Backup </em>，这就造成了一个问题，如果我有多块硬盘，不想占用启动盘的宝贵空间，那么能否更改这个路径来备份呢？</p>
-<p>答案是不能，即使你更换了资料库的位置，但是备份的路径仍然不会变。</p>
-<p><img src="http://www.lxysc.cc/wp-content/uploads/2016/02/屏幕快照-2016-02-25-下午6.24.12.png" alt="image"></p>
-<p>如图，资源库只是包括音乐，视频等文件<strong>不包括备份</strong>。</p>
-<p>但是事实上有一个曲线救国的方法，就是利用替身来替换路径。</p>
-<p>##详细方法如下：</p>
-<p>1.先进入/Users/用户名/Library/Application Support/Backup，将只能的所有文件夹转移到/Volumes/你的硬盘/MobileSync/Backup（这个路径可以自由修改，之后的代码也要更改）</p>
-<p>2.打开终端，输入 <code>ln -s /Volumes/你的硬盘/MobileSync ~/Library/Application\ Support/MobileSync</code>（注意空格需要用反斜杠）</p>
-<p>3.Done</p>
-<p><img src="http://www.lxysc.cc/wp-content/uploads/2016/02/屏幕快照-2016-02-25-下午6.33.22.png" alt="image"></p>
-<p>这样便是成功，可以看看iTunes中偏好设置–设备之中有没有出现了原来的备份。</p>
-<p>这个命令创建了一个<strong>替身（软链接）</strong>可以直接跳转到你的实际地址上，所以之后备份的话表面上备份路径没有改变，但是实际已经换到了你的新地址上。</p>
-
-          
+          <p>众所周知，mac之下的iTunes进行设备备份的时候，默认路径是：<em>/Users/用户名/Library/Application Support/Backup </em>，这就造成了一个问题，如果我有多块硬盘，不想占用启动盘的宝贵空间，那么能否更改这个路径来备份呢？<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/11/更换MAC的iTunes设备备份的路径/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
