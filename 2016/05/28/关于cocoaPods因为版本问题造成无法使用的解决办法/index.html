@@ -96,7 +96,7 @@
 
  今天使用cocoaPods的时候遇到一些奇怪的问题，在编辑好Podfile的之后，执行 pod install 提示出错，错误信息如下  
 /Library/Ruby/Site/2.0.0/rubygems/dependency.rb:308:in `to_specs’: Could not find ‘cocoapods’ (&amp;">
-<meta property="og:updated_time" content="2016-05-28T05:00:57.000Z">
+<meta property="og:updated_time" content="2016-05-28T05:02:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于cocoaPods因为版本问题造成无法使用的解决办法">
 <meta name="twitter:description" content="无法查看cocoaPods版本，也无法执行相关的pod命令  
@@ -340,7 +340,7 @@
         <p><strong>无法查看cocoaPods版本，也无法执行相关的pod命令 </strong> </p>
 <hr>
 <p> 今天使用cocoaPods的时候遇到一些奇怪的问题，在编辑好Podfile的之后，执行 <code>pod install</code> 提示出错，错误信息如下  </p>
-<p><strong>/Library/Ruby/Site/2.0.0/rubygems/dependency.rb:308:in `to_specs’: Could not find ‘cocoapods’ (&gt;= 0) among 73 total gem(s) (Gem::MissingSpecError)<br>Checked in ‘GEM_PATH=/Users/Shu/.rvm/gems/ruby-2.3.0:/Users/Shu/.rvm/gems/ruby-2.3.0@global’, execute `gem env` for more information<br>from /Library/Ruby/Site/2.0.0/rubygems/dependency.rb:320:in `to_spec’<br>from /Library/Ruby/Site/2.0.0/rubygems/core_ext/kernel_gem.rb:65:in `gem’<br>from /usr/local/bin/pod:22:in `<main\></main\></strong><br> <a id="more"></a> </p>
+<p><strong>/Library/Ruby/Site/2.0.0/rubygems/dependency.rb:308:in `to_specs’: Could not find ‘cocoapods’ (&gt;= 0) among 73 total gem(s) (Gem::MissingSpecError)<br>Checked in ‘GEM_PATH=/Users/Shu/.rvm/gems/ruby-2.3.0:/Users/Shu/.rvm/gems/ruby-2.3.0@global’, execute `gem env` for more information<br>from /Library/Ruby/Site/2.0.0/rubygems/dependency.rb:320:in `to_spec’<br>from /Library/Ruby/Site/2.0.0/rubygems/core_ext/kernel_gem.rb:65:in `gem’<br>from /usr/local/bin/pod:22:in main</strong><br> <a id="more"></a> </p>
 <p>在网上搜寻了一下应该是和gem的版本和cocoaPods的版本有关系，因为我之前配置过Ruby环境，可能因此有关，随即便升级一下gem，执行<code>sudo gem update --system</code>  成功之后再查看<code>pod --version</code>还是报错，只好使用<code>sudo gem install</code>更新，现在支持了增量更新，所以不用再配置cocoaPods。<br>更新之后再查看<code>pod --version</code> 已经正常显示：<code>1.0.0</code>  </p>
 <p><strong>无法执行pod install命令</strong>  </p>
 <hr>
